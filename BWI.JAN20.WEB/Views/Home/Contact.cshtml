@@ -1,0 +1,62 @@
+﻿@model ContactMeModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+
+<!--
+    this is the comment
+asdfasf
+asdfa
+sdfsdf
+
+webaddress
+email
+address
+phoneno
+
+
+-->
+
+<div class="card shadow ">
+    <div class="card-body">
+        @ViewBag.message @ViewBag.name
+
+
+
+        <table class="table table-bordered">
+            <tr>
+                <td>web</td>
+                <td>
+                    <a href="@Model.WebAddress">@Model.WebAddress</a>
+                </td>
+                <td>email</td>
+                <td>@Model.Email</td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td>@Model.Address</td>
+                <td>phone</td>
+                <td>@Model.Phone</td>
+            </tr>
+        </table>
+        available students
+
+        <table>
+            <tr>
+                <td>Students</td>
+            </tr>
+            @foreach (string student in ViewBag.students as string[])
+            {
+                <tr>
+                    <td>@student</td>
+                </tr>
+            }
+
+
+        </table>
+
+    </div>
+</div>

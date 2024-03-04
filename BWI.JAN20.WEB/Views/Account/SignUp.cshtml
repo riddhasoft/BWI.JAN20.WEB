@@ -1,0 +1,39 @@
+﻿@model SignupModel
+
+<h3 class="text-center">Sign Up</h3>
+<div class="row">
+    <div class="offset-3 col-lg-6">
+        <form asp-action="SignUp">
+            <div class="form-group">
+                <label class="control-label" asp-for="Email">
+
+                </label>
+
+                <input class="form-control" asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for="Password"></label>
+                <input class="form-control" type="password" asp-for="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for="ConfirmPassword"></label>
+                <input class="form-control" type="password" asp-for="ConfirmPassword" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Sign Up" />
+            </div>
+            
+        </form>
+
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
