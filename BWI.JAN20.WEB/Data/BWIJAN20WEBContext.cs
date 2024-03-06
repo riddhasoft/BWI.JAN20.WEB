@@ -18,7 +18,7 @@ public class BWIJAN20WEBContext : DbContext
     public DbSet<BWI.JAN20.WEB.Models.StudentsBookEnrollmentModel>? StudentsBookEnrollmentModel { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.HasDefaultSchema("myScheema");
+        modelBuilder.HasDefaultSchema("dbo");
         base.OnModelCreating(modelBuilder);
 
     }

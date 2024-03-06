@@ -4,10 +4,13 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>BookModel</h4>
-<hr />
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/bookmodels/index">Books</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create</li>
+    </ol>
+</nav>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
